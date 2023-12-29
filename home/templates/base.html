@@ -12,6 +12,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.13.0/css/mdb.min.css" integrity="sha512-GL4Y/EHyW2tNWTzabWptFI2SGlUoQK2zDHSN5+td7F0+z4pZl+8dqrbsbss6t/sL7Izz0vAFA4uaJxLcr4ZTSw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.13.0/js/mdb.min.js" integrity="sha512-XyqjfygTtYi45jIuj0TrStZ06L6RwL5xZrypAqQWYzodHtPr6RQW2gQDw5Wz1+P2ztVYpESqnYcZXL5vOTj8tA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
@@ -22,8 +29,9 @@
             <!-- Container wrapper -->
             <div class="container">
                 <!-- Navbar brand -->
+                {% load static %}
                 <a class="navbar-brand me-2" href="https://mdbgo.com/">
-                    <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16"
+                    <img src="{% static 'img/logo.png' %}" height="32"
                         alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
                 </a>
 
@@ -39,16 +47,25 @@
                     <!-- Left links -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
+                            
                         </li>
                     </ul>
                     <!-- Left links -->
 
                     <div class="d-flex align-items-center">
-                        <button data-mdb-ripple-init type="button" class="btn btn-link px-3 me-2">
-                            Login
+                        <button data-mdb-ripple-init type="button" style="color: black;" class="btn btn-link px-3 me-2">
+                            About
                         </button>
-                        <button data-mdb-ripple-init type="button" class="btn btn-primary me-3">
+                        <button data-mdb-ripple-init type="button" style="color: black;" class="btn btn-link px-3 me-2">
+                            Skills
+                        </button>
+                        <button data-mdb-ripple-init type="button" style="color: black;" class="btn btn-link px-3 me-2">
+                            Projects
+                        </button>
+                        <button data-mdb-ripple-init type="button" style="color: black;" class="btn btn-link px-3 me-2">
+                            Contact
+                        </button>
+                        <button data-mdb-ripple-init type="button" class="btn btn-dark me-3">
                             Sign up for free
                         </button>
                         <a data-mdb-ripple-init class="btn btn-dark px-3"
@@ -65,13 +82,28 @@
 
     <main>
         {% block content %}
+        
 
         {% endblock %}
     </main>
 
     <footer>
         <!-- Add your footer content here -->
-        <p>&copy; 2023 My Django App</p>
+        <div class="contaier" style="background-color: black; padding-bottom:100px">
+            <p style="font-size: 50px; text-align: center; font-weight: bold; color:  white;">Contact</p>
+            <div  style="color: white; padding-left: 707px;">
+                
+                <a href="" class="me-4 text-reset" style="padding-right:60px;">
+                    <i class="fas fa-envelope" style="color: white; padding-right: 6px;"></i>gauravwarise04@gmail.com
+                </a>
+                <a href="" class="me-4 text-reset" style="padding-right:60px;">
+                  <i class="fab fa-linkedin" style="color: white; padding-right: 6px;"></i>Linkedin
+                </a>
+                <a href="" class="me-4 text-reset" style="padding-right:60px;">
+                  <i class="fab fa-github" style="color: white; padding-right: 6px;"></i>GitHub
+                </a>
+              </div>
+        </div>
     </footer>
 
     <!-- Add your JavaScript links and other body elements here -->
