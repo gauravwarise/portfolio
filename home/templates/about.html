@@ -53,8 +53,19 @@
         ultrices sagittis.
     </p>
     <div class="buttons" style="text-align: center;">
-        <button type="button" class="button-style" >Download CV</button>
-        <button type="button" class="button-style" >Hire Me</button>
+        <button type="button" class="button-style" onclick="downloadCV()">Download CV</button>
+        <button type="button" class="button-style" onclick="callMe()">Hire Me</button>
     </div>
 </div>
 
+<script>
+    function downloadCV() {
+        // Replace 'your_cv_file_url' with the actual URL of your CV file
+        window.location.href = 'static/resume/cv.pdf';
+    }
+
+    function callMe() {
+        // Replace 'your_phone_number' with your actual phone number
+        window.location.href = 'tel:9112792733';
+    }
+</script>
