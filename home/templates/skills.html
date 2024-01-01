@@ -1,55 +1,96 @@
-<div class="skills" style="background-color: black; padding: 0 5% 5% 5%;">
-    <p style="font-size: 60px; text-align: left; font-weight: bold; color:  white;">Skills</p>
-    <!-- <div style="display: flex; flex-direction: row; width:70%; margin: 0 auto;">
-        {% load static %}
-        <div class="skills" style="padding: 0 5% 0 5%; height:40%; width:100%">
-            <img src="{% static 'img/java.png' %}" alt="css logo">
-        </div>
-        <div class="skills" style="padding: 0 5% 0 5%; height:40%; width:100%">
-            <img src="{% static 'img/django.png' %}" alt="css logo">
-        </div>
-        <div class="skills" style="padding: 0 5% 0 5%; height:40%; width:100%">
-            <img src="{% static 'img/sql.png' %}" alt="css logo">
-        </div>
-        <div class="skills" style="padding: 0 5% 0 5%; height:40%; width:100%">
-            <img src="{% static 'img/pandas.png' %}" alt="css logo">
-        </div>
-        <div class="skills" style="padding: 0 5% 0 5%; height:40%; width:100%">
-            <img src="{% static 'img/java.png' %}" alt="css logo">
-        </div>
-    </div> -->
+<style>
+    .skills {
+        background-color: black;
+        padding: 0 5% 5% 5%;
+    }
 
-    <div style="display: flex; flex-direction: row; margin: 0 auto; max-width:1200px; width:100%; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem">
+    .skills-heading{
+        font-size: 60px;
+        text-align: left;
+        font-weight: bold;
+        color: white;
+    }
+
+    .skills-grid {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
+
+    .skills-item{
+        background-color: rgb(56, 56, 56);
+        border-radius: 24px;
+        height: 150px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill-image{
+        width: 68%;
+        height: 68%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 767px) {
+        .skills {
+            padding: 0 22% 5% 12%
+        }
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
+        }
+
+        .skills-item{
+            height: 103px;
+            width: 90px;
+        }
+
+        .skills-heading{
+            font-size: 45px;
+        }
+    }
+
+</style>
+
+
+
+
+<div class="skills" id="skills">
+    <p class="skills-heading">Skills</p>
+    <div class="skills-grid">
         {% load static %}
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/java.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
+        <div class="skills-item">
+            <img src="{% static 'img/python.png' %}" alt="css logo" class="skill-image">
         </div>
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/django.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
+        <div class="skills-item">
+            <img src="{% static 'img/django.png' %}" alt="css logo" class="skill-image">
         </div>
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/sql.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
+        <div class="skills-item">
+            <img src="{% static 'img/sql.png' %}" alt="css logo"  style="width: 53%; height: 68%; object-fit: cover;">
         </div>
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/pandas.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
+        <div class="skills-item">
+            <img src="{% static 'img/pandas.png' %}" alt="css logo" class="skill-image">
         </div>
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/java.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
+        <div class="skills-item">
+            <img src="{% static 'img/polars.png' %}" alt="css logo" class="skill-image">
         </div>
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/java.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
+        <div class="skills-item">
+            <img src="{% static 'img/js.png' %}" alt="css logo" class="skill-image">
         </div>
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/django.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
+        <div class="skills-item">
+            <img src="{% static 'img/java.png' %}" alt="css logo" class="skill-image">
         </div>
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/sql.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
+        <div class="skills-item">
+            <img src="{% static 'img/springboot.png' %}" alt="css logo" class="skill-image">
         </div>
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/pandas.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
-        </div>
-        <div class="skills" style="background-color:white; border: 1px solid yellow; height:200px; width:200px">
-            <img src="{% static 'img/java.png' %}" alt="css logo" style="width: 100%; height: 100%; object-fit: cover; background-color:black">
+        <div class="skills-item">
+            <img src="{% static 'img/bootstrap.png' %}" alt="css logo" class="skill-image">
         </div>
     </div>
 </div>

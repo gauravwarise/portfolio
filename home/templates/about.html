@@ -1,6 +1,51 @@
-<div class="about" style="background-color: black; padding-top: 10%; padding-bottom: 10%;">
-    <p style="font-size: 100px; text-align: center; font-weight: bold; color:  white;">About</p>
-    <p class="about" style="color: white;margin-left: 15%;margin-right: 15%;">
+<style>
+    .about-content{
+        background-color: black; 
+        padding: 60px 0 35px 0;
+
+    }
+    .about-heading{
+        font-size: 100px; text-align: center; font-weight: bold; color:  white;
+    }
+    .description{
+        color: white;margin-left: 15%;margin-right: 15%;
+    }
+    .button-style{
+        width: 7%; 
+        height: 51px; 
+        border: none; 
+        border-radius: 5px; 
+        margin: 1%;
+    }
+     /* Media query for mobile view */
+    @media (max-width: 767px) {
+        .about-content{
+            background-color: black; 
+            padding: 0px 0 35px 0;
+    
+        }
+        .about-heading{
+            font-size: 55px; text-align: center; font-weight: bold; color:  white;
+        }
+        .description{
+            color: white;margin-left: 15%;margin-right: 15%;
+        }
+        .button-style{
+            width: 34%; 
+            height: 34px; 
+            border: none; 
+            border-radius: 5px; 
+            margin: 1%;
+        }
+    
+    }
+</style>
+
+
+
+<div class="about-content" id="about">
+    <p class="about-heading">About</p>
+    <p class="about description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Molestie nunc non blandit massa enim nec dui nunc. Nulla posuere sollicitudin aliquam ultrices
         sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -8,7 +53,8 @@
         ultrices sagittis.
     </p>
     <div class="buttons" style="text-align: center;">
-        <button type="button" class="button-style" style="width: 7%; height: 51px; border: none; border-radius: 5px; margin: 1%;">Download CV</button>
-        <button type="button" class="button-style" style="width: 7%; height: 51px; border: none; border-radius: 5px; margin: 1%;">Hire Me</button>
+        <button type="button" class="button-style" >Download CV</button>
+        <button type="button" class="button-style" >Hire Me</button>
     </div>
 </div>
+

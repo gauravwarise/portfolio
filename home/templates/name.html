@@ -1,17 +1,99 @@
-<div class="row" style="margin-bottom: 300px;">
-    <div class="col-md-6">
-        <div style="margin-top: 27%;margin-left: 40%; background-color: black;">
-            <p class="firstname" style="font-size: 100px; text-align: right; font-weight: bold; color:  white;">
+<style>
+    .nameSection {
+        height: 78vh;
+        width: 70vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .name-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .name-content:last-child {
+        padding-top: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    .first-name-section {
+        width: 26vw;
+        padding-right: 1rem;
+    }
+
+    .last-name-section {
+        line-height: 0.99;
+    }
+
+    .last-name-section p:last-child {
+        display: flex;
+        justify-content: end;
+    }
+
+    .name-content p:first-child {
+        font-size: 100px;
+        font-weight: bold;
+    }
+
+
+    /* Media query for mobile view */
+    @media (max-width: 767px) {
+        .nameSection {
+            height: 44vh;
+            display: block;
+            padding-top: 3rem;
+        }
+
+        .name-content p:first-child {
+            font-size: 63px;
+            text-align: center !important;
+        }
+        .name-content:last-child{
+        padding-top: 0rem;
+        }
+        .first-name-section {
+            width: 100vw;
+            padding-right: 0;
+        }
+    }
+</style>
+<!-- <div class="row container nameSection" id="name" >
+    <div class="col-md-6 name-content">
+        <div style=" background-color: black; " class="first-name-section">
+            <p class="firstname" style=" text-align: right; color:  white;">
                 Gaurav
             </p>
         </div>
     </div>
-    <div class="col-md-6">
-            <p class="lastname" style="margin-bottom: -34px; margin-top: 27%;font-size: 100px; text-align: left; font-weight: bold; color:  black;">
+    <div class="col-md-6 name-content ">
+        <div class="last-name-section">
+            <p class="lastname" style="  margin-bottom:0">
                 Warise
             </p>
-            <p style="font-size: 24px; margin-left: 35px;">
+            <p style="font-size: 24px;  color: #A8A7A7;">
                 SOFTWARE ENGINEER
             </p>
+        </div>
+    </div>
+</div> -->
+<div class="  nameSection" id="name">
+    <div class="name-content">
+        <div style=" background-color: black; " class="first-name-section">
+            <p class="firstname" style=" text-align: right; color:  white;">
+                Gaurav
+            </p>
+        </div>
+    </div>
+    <div class="name-content ">
+        <div class="last-name-section">
+            <p class="lastname" style="  margin-bottom:0">
+                Warise
+            </p>
+            <p style="font-size: 24px;  color: #A8A7A7;">
+                SOFTWARE ENGINEER
+            </p>
+        </div>
     </div>
 </div>
